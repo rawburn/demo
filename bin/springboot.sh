@@ -98,7 +98,7 @@ start(){
   else
     ## 启动 jar 包
     echo "${APP_NAME} starting ...... "
-    ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH}
+    nohup ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH} > /dev/null 2>&1 &
     echo "nohup ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH} > /dev/null 2>&1 &"
     sleep 1
     echo "${APP_NAME} started  completed "

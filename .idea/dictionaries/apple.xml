@@ -2,6 +2,10 @@
   <dictionary name="apple">
     <words>
       <w>aliyun</w>
+      <w>dspring</w>
+      <w>dspring.application.json</w>
+      <w>dspring.profiles.active</w>
+      <w>nohup</w>
       <w>oceanum</w>
     </words>
   </dictionary>
