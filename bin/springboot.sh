@@ -83,7 +83,6 @@ APP_PATH=$BASE_PATH"/"$APP_NAME
 is_running(){
   ## 尝试获取已经运行程序的PID
   PID=`ps -ef|grep ${APP_PATH}|grep -v grep|awk '{print $2}'`
-  echo "TEST: "$PID
   if [ -z "${PID}" ]; then
     return 0
   else
@@ -99,7 +98,7 @@ start(){
   else
     ## 启动 jar 包
     echo "${APP_NAME} starting ...... "
-    nohup ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH} > /dev/null 2>&1 &
+    ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH}
     echo "nohup ${JAVA_CMD} -jar ${OTHER_ARGS} ${JAVA_OPTS} -Dspring.profiles.active=${MODEL} ${APP_PATH} > /dev/null 2>&1 &"
     sleep 1
     echo "${APP_NAME} started  completed "
