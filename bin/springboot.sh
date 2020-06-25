@@ -3,10 +3,10 @@
 # Usage:
 # 1. 请将本脚本放到 Linux 系统的 path 路径下，最好是 /bin 目录下
 # 2. 请给本脚本设备可执行权限
-# 3. 启动示例         springboot xxx.jar start
-# 4. 重启示例         springboot xxx.jar restart
-# 5. 停止示例         springboot xxx.jar stop
-# 6. 状态示例         springboot xxx.jar status
+# 3. 启动示例         ./bin/springboot.sh xxx.jar start
+# 4. 重启示例         ./bin/springboot.sh xxx.jar restart
+# 5. 停止示例         ./bin/springboot.sh xxx.jar stop
+# 6. 状态示例         ./bin/springboot.sh xxx.jar status
 
 ## 每个项目可定制的部分
 JAVA_OPTS_PROD="-Xms6144m -Xmx6144m"
@@ -23,7 +23,7 @@ fi
 
 ## 输出本命令的使用方法并退出
 usage() {
-    echo "Usage: springboot-starter [app_name].jar [start|stop|restart|status]"
+    echo "Usage: springboot.sh [app_name].jar [start|stop|restart|status]"
     exit 1
 }
 
